@@ -75,11 +75,10 @@ public class TransitiveDependencyHelper {
         IsolatedClassLoader classLoader = new IsolatedClassLoader();
 
         classLoader.addPath(libraryManager.downloadLibrary(Library.builder()
-                .groupId("com{}alessiodp{}libby{}maven{}resolver")
+                .groupId("net{}flectone")
                 .artifactId("libby-maven-resolver")
                 .version("1.0.1")
-                .checksumFromBase64("EmsSUwjtqSeYTt8WEw7LPI/5Yz8bWSxf23XcdLEM7dk=")
-                .fallbackRepository(Repositories.MAVEN_CENTRAL)
+                .repository(Repositories.MAVEN_CENTRAL)
                 .fallbackRepository("https://repo.alessiodp.com/releases")
                 .build()
         ));
